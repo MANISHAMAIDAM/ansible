@@ -7,8 +7,10 @@
      
 - name : uppercase
   hosts: localhost
+  vars:
+    course: devops
   tasks:
   - name : converting to uppercase
     ansible.builtin.debug:
-     msg:  " devops | uppercase "
+     msg:  " {{course | uppercase }} "
      
