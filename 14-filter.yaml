@@ -61,9 +61,9 @@
   hosts: localhost
   vars:
    lists:
-    - { "key": "course", "value": "Devops"},
-    - { "key": "cloudplatform", "value": "AWS"},
-    - {"key": "configurationtool", "value": "Ansible" }
+   - { "key": "course", "value": "Devops"}
+   - { "key": "cloudplatform", "value": "AWS"}
+   - {"key": "configurationtool", "value": "Ansible" }
   tasks:
   - name: before convert
     ansible.builtin.debug:
