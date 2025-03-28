@@ -44,10 +44,11 @@
 
 - name: convert dictionary into items/lists
   hosts: localhost
-  Dict:
-   course: Devops
-   cloudplatform: AWS
-   Configurationtool: Ansible
+  vars:
+   Dict:
+    course: Devops
+    cloudplatform: AWS
+    configurationtool: Ansible
   tasks:
   - name: before convert
     ansible.builtin.debug:
