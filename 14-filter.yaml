@@ -22,4 +22,21 @@
   - name: converting to lowercase
     ansible.builtin.debug:
      msg: "{{course | lower }}"
-     
+        
+- name: remove duplicates
+  hosts: localhost
+  vars:
+    numbers: [1, 2, 3, 3, 4, 4, 5]
+  tasks:
+  - name: remove duplicates
+    ansible.builtin.debug:
+      msg: "{{ numbers | unique }}"
+
+- name: remove duplicates
+  hosts: localhost
+  vars:
+    names: ['devops', 'devops','aws']
+  tasks:
+  - name: remove duplicates
+    ansible.builtin.debug:
+      msg: "{{ numbers | unique }}"
