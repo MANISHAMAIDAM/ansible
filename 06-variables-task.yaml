@@ -9,8 +9,8 @@
      Name : Shresta
      Course: DevSecOps
     ansible.builtin.debug:
-     msg: "Hello {{Name}}  welcome to {{Course}} mastering"
+     msg: "Hello {{Name}}  welcome to {{Course}} mastering sessions"
 
   - name :  calling var from play
     ansible.builtin.debug:
-     msg: "Hello {{Name}}  welcome to {{Course}} mastering"
+     msg: "Hello {{Name}}  welcome to {{Course}} mastering sessions"
