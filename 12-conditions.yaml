@@ -1,0 +1,14 @@
+- name : conditions in ansible
+  hosts: localhost
+  become: true
+  tasks:
+  - name: using when condition 
+    ansible.builtin.command: id expense
+    # register: USER
+    # ignore_errors: true
+  - name: print user info
+    ansible.builtin.debug:
+    msg: "Hello"
+
+
+
