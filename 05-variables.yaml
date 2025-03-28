@@ -1,0 +1,9 @@
+- name: variable declarion using vars
+  hosts: localhost
+  vars: #variable declaration
+    Name : Manisha
+    Course: Devops with AWS
+  tasks:
+  - name : calling var files
+    ansible.builtin.debug:
+     msg: "Hello {{Name}}  welcome to {{Course}} mastering"
