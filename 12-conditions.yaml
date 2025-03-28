@@ -14,8 +14,7 @@
 
   - name: adding user if not exist 
     ansible.builtin.command: useradd expense
-    when: 
-
+    when: USER.rc != 0 #condition
  
   
   - name: print Hello
