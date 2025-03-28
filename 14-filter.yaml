@@ -5,3 +5,10 @@
     ansible.builtin.debug:
      msg:  "Course is {{course | default('DevOps')}}"
      
+- name : uppercase
+  hosts: localhost
+  tasks:
+  - name : converting to uppercase
+    ansible.builtin.debug:
+     msg:  " devops | uppercase "
+     
