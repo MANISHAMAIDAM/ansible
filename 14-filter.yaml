@@ -12,5 +12,5 @@
   tasks:
   - name : converting to uppercase
     ansible.builtin.debug:
-     msg:  " {{course | uppercase }} "
+     msg:  " {{course | upper }} "
      
