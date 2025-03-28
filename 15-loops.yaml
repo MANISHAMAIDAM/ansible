@@ -3,7 +3,7 @@
   tasks:
   - name : looping through the list of items given
     ansible.builtin.debug:
-     msg: " Tools in devops {{item}}"
+     msg: " {{item}} is devops tool"
     loop: 
     - linux
     - ansible
