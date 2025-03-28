@@ -6,13 +6,13 @@
     private: false
   tasks: 
   - name: finding given number less 10
-    ansible.built.debug:
+    ansible.builtin.debug:
      msg: "number {{Number}} is less than 10"
     when: Number | int < 10
 
 
   - name: finding given number greator than 10
-    ansible.built.debug:
+    ansible.builtin.debug:
      msg: "number {{Number}} is less than 10"
     when: Number | int > 10
 
