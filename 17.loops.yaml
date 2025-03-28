@@ -1,0 +1,14 @@
+- name : loops
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: package management in ansible
+    ansible.builtin.dnf:
+     name: "{{item.key}}"
+     state: "{{item.value}}"
+  loop:
+  - { key:'nginx', value:'present'}
+  - { key:'mysql', value:'absent'}
+  - { key:'postfix', value:'absent'}
+
+
