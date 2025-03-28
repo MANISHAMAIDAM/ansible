@@ -1,0 +1,16 @@
+- name: variable declarion using vars
+  hosts: localhost
+  vars: #variable declaration
+    Name : Manisha
+    Course: Devops with AWS
+  tasks:
+  - name : calling var from task
+    vars:
+     Name : Shresta
+     Course: DevSecOps
+    ansible.builtin.debug:
+     msg: "Hello {{Name}}  welcome to {{Course}} mastering"
+
+  - name :  calling var from play
+    ansible.builtin.debug:
+     msg: "Hello {{Name}}  welcome to {{Course}} mastering"
