@@ -1,0 +1,10 @@
+- name: using loops in ansible
+  hosts: localhost
+  tasks:
+  - name : looping through the list of items given
+    ansible.builtin.debug:
+     msg: " Tools in devops {{item}}"
+    loop: 
+    - linux
+    - ansible
+    - devops
