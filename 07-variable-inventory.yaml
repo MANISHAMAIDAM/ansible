@@ -3,4 +3,4 @@
   tasks:
   - name : calling var from inventory
     ansible.builtin.debug:
-     msg: "Hello {{Name}}  welcome to {{Course}} mastering"
+     msg: "Hello {{Name}}  welcome to {{Course}} mastering session"
