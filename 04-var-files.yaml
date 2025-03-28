@@ -1,0 +1,8 @@
+- name: variable declarion using var files
+  hosts: localhost
+  var_files:
+  - vars.yaml 
+  tasks:
+  - name : calling var files
+    ansible.builtin.debug:
+     msg: "Hello {{Name}}  welcome to {{Course}} mastering"
