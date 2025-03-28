@@ -1,19 +1,19 @@
 - name : Nubmber less or grtor than
   hosts: localhost
   vars_prompt: 
-  - number: Number
+  - name: Number
     prompt: please enter a value
-    private: no
+    private: false
   tasks: 
   - name: finding given number less 10
     ansible.built.debug:
      msg: number {{Number}} is less than 10
     when: Number | int < 10
 
+  tasks: 
   - name: finding given number greator than 10
     ansible.built.debug:
      msg: number {{Number}} is less than 10
     when: Number | int > 10
 
 
-   
