@@ -5,7 +5,7 @@
     ansible.builtin.debug:
      msg:  "Course is {{course | default('DevOps')}}"
      
-- name : uppercase
+- name : usage of filter upper
   hosts: localhost
   vars:
     course: devops
@@ -13,4 +13,13 @@
   - name : converting to uppercase
     ansible.builtin.debug:
      msg:  " {{course | upper }} "
+
+- name: usage of filter lower
+  hosts: localhost 
+  vars:
+   course: DEVOPS
+  tasks: 
+  - name: converting to lowercase
+    ansible.builtin.debug:
+     msg: "{{course | lower }}"
      
