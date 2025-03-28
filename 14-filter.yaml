@@ -57,20 +57,18 @@
     ansible.builtin.debug:
      msg: "{{ Dict | dict2items }}"
 
-- name: convert items/lists into dictionary 
+- name: convert items to dictionary
   hosts: localhost
   vars:
-   lists:
-   - { "key": "course", "value": "Devops"}
-   - { "key": "cloudplatform", "value": "AWS"}
-   - {"key": "configurationtool", "value": "Ansible" }
+    my_list:
+    - {'key': 'Course', 'value': 'Devops'}
+    - {'key': 'Configurationtool', 'value': 'Ansible'}
+    - {'key': 'Cloudplatform', 'value': 'AWS'}
   tasks:
   - name: before convert
     ansible.builtin.debug:
-     msg: "{{items}}"
+      msg: "Before convert: {{ my_list }}"
   - name: after convert
     ansible.builtin.debug:
-     msg: "{{ items | items2dict }}"
-  
-
+      msg: "After convert: {{ my_list | items2dict }}"
 
