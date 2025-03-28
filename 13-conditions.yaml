@@ -3,14 +3,13 @@
   vars_prompt: 
   - number: Number
     prompt: please enter a value
-    private: false
+    private: no
   tasks: 
   - name: finding given number less 10
     ansible.built.debug:
      msg: number {{Number}} is less than 10
     when: Number | int < 10
 
-  tasks: 
   - name: finding given number greator than 10
     ansible.built.debug:
      msg: number {{Number}} is less than 10
