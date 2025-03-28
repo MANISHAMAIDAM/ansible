@@ -4,11 +4,10 @@
   tasks:
   - name: using when condition 
     ansible.builtin.command: id expense
-    # register: USER
-    # ignore_errors: true
+  
   - name: print user info
     ansible.builtin.debug:
-    msg: "Hello"
+     msg: "Hello"
 
 
 
