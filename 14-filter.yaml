@@ -3,5 +3,5 @@
   tasks:
   - name : assigning default value using filters
     ansible.builtin.debug:
-     msg:  Course is {{course | default(DevOps)}}
+     msg:  "Course is {{course | default('DevOps')}}"
      
