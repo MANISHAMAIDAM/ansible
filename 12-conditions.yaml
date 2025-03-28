@@ -2,16 +2,21 @@
   hosts: localhost
   become: true
   tasks:
-  - name: using when condition 
+  - name: check whether user exist or not
     ansible.builtin.command: id expense
+    register: USER
     ignore_errors: true
 
 
-  - name: using when condition 
+  - name: adding user if not exist 
     ansible.builtin.command: useradd expense
-  
-  
+
   - name: print user info
+    ansible.builtin.debug:
+     msg: "{{USER}}"  
+  
+  
+  - name: print Hello
     ansible.builtin.debug:
      msg: "Hello"
 
