@@ -4,7 +4,7 @@
   tasks:
   - name : installing packges with ansible loops
     ansible.builtin.dnf:
-     name: {{item}}
+     name: "{{ item }}"
      state: latest
     loop: 
     - nginx
