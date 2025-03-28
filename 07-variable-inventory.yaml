@@ -1,0 +1,6 @@
+- name: variable declaration in inventory
+  hosts: localhost
+  tasks:
+  - name : calling var from inventory
+    ansible.builtin.debug:
+     msg: "Hello {{Name}}  welcome to {{Course}} mastering"
